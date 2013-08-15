@@ -227,6 +227,12 @@
     //}}}
     function newSelection(e) //{{{
     {
+      var c = Coords.getFixed();
+
+      if(c.w > 5 && c.h > 5){
+        return false
+      }
+      
       if (options.disabled) {
         return false;
       }
